@@ -1,6 +1,7 @@
-const parse = require('csv-parse')
+const parse = require('csv-parse');
 const fs = require('fs');
-const output = []
+const City = require('./models/city');
+const output = [];
 let csvFile = 'Data/WorldCitiesShortList.csv';
 fs.createReadStream(csvFile)
     .pipe(parse({
@@ -10,7 +11,7 @@ fs.createReadStream(csvFile)
 })
     .on('readable', function(){
         let record
-        while (record = this.read()) {
+        while (record === this.read()) {
             output.push(record)
         }
     })
