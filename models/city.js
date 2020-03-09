@@ -18,7 +18,9 @@ class City{
         this.id=id;
 
     }
-
+    static create(city, city_ascii,lat,lng,country,iso2,iso3,admin_name,capital,population,id) {
+            return new City (city, city_ascii,lat,lng,country,iso2,iso3,admin_name,capital,population,id)
+    }
 
 }
 module.exports = City ;
