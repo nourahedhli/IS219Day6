@@ -13,5 +13,4 @@ test ('can create a city object by factory', () => {
 
 
 
-
 })
